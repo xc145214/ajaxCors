@@ -20,7 +20,7 @@ import org.springframework.web.servlet.mvc.method.annotation.AbstractJsonpRespon
  *
  * @author xiachuan at 2018/3/27 17:35。
  */
-//@ControllerAdvice
+@ControllerAdvice
 public class JsonpAdvice extends AbstractJsonpResponseBodyAdvice {
 
     public JsonpAdvice() {
