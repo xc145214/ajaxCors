@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/test")
-@CrossOrigin
 public class TestController {
 
     @GetMapping("/get1")

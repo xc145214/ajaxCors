@@ -23,7 +23,7 @@
 		jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 
 		// 请求的接口的前缀 // http://localhost:8080/test
-		var base = "http://localhost:8080/test";
+		var base = "/ajaxserver/test";
 
 		//测试模块
 		describe("ajax跨越完全讲解", function() {
@@ -46,33 +46,6 @@
 					done();
 				}, 100);
 			});
-			
-			// 测试方法
-			// it("jsonp请求", function(done) {
-			// 	// 服务器返回的结果
-			// 	var result;
-            //
-			// 	$.ajax({
-			// 		url: base +"/get1",
-			// 		dataType: "jsonp",
-			// 		jsonp: "callback",
-			// 		cache:true,
-			// 		type:"post",
-			// 		success: function(json){
-			// 			result = json;
-			// 		}
-			// 	});
-            //
-			// 	// 由于是异步请求，需要使用setTimeout来校验
-			// 	setTimeout(function() {
-			// 		expect(result).toEqual({
-			// 			"data" : "get1 ok"
-			// 		});
-            //
-			// 		// 校验完成，通知jasmine框架
-			// 		done();
-			// 	}, 100);
-			// });
 
 
 			it("postJson请求", function(done) {
