@@ -18,19 +18,4 @@ public class AjaxserverApplication {
     public static void main(String[] args) {
         SpringApplication.run(AjaxserverApplication.class, args);
     }
-
-    /**
-     * 配置过滤器
-     * @return
-     */
-    @Bean
-    public FilterRegistrationBean registerFilter() {
-
-        FilterRegistrationBean bean = new FilterRegistrationBean();
-
-        bean.addUrlPatterns("/*");
-        bean.setFilter(new CrosFilter());
-
-        return bean;
-    }
 }
