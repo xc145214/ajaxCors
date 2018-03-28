@@ -74,3 +74,26 @@ jsonp的实现原理是：前后台约定带有“callback”这个参数的请�
 发送自定义头的 ajax 请求
 
 非简单请求会发送方法为 OPTIONS的预检命令，通过缓存减少预检命令。
+
+### Nginx 调用方解决跨域
+配置 Nginx.conf
+```
+server {
+    listen 80;
+    server_name a.com;
+
+    location /{
+        proxy_pass http://localhost:8081/;
+    }
+
+    location /ajaxserver{
+        proxy_pass http://localhost:8080/;
+    }
+}
+```
+
+### Nginx 被调用方解决跨域
+配置 Nginx.conf
+```
+
+```
